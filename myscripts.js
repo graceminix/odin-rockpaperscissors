@@ -1,6 +1,7 @@
 var computerscore = 0;
 var playerscore = 0;
 
+//This function selects a random rock, paper, or scissors for the computer.
 function computerPlay() {
     var computerrandom = Math.floor((Math.random() * 3) + 1)
     if (computerrandom === 1) {
@@ -12,6 +13,8 @@ function computerPlay() {
     }
 }
 
+
+//This function plays a round and updates the score accordingly.
 function playRound(player, computerSelection) {
     if (player === computerSelection) {
         return("You have tied!")
@@ -42,6 +45,7 @@ function playRound(player, computerSelection) {
     } 
 }
 
+//This function takes player input and checks it is valid.
 function playerChoice() {
     var player = prompt("Rock, paper, or scissors?").toUpperCase()
     if (player == "ROCK" || player == "PAPER" || player == "SCISSORS") {
@@ -52,6 +56,7 @@ function playerChoice() {
     }
 }
 
+//This function plays a game until someone has 5 points, and then outputs the winner.
 function game() {
     if (playerscore != 5 && computerscore != 5) {
         var computerSelection = computerPlay()
