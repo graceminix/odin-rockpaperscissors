@@ -13,8 +13,6 @@ function computerPlay() {
 }
 
 function playRound(player, computerSelection) {
-    console.log(player)
-    console.log(computerSelection)
     if (player === computerSelection) {
         return("You have tied!")
     } else if (player === "ROCK") {
@@ -55,17 +53,22 @@ function playerChoice() {
 }
 
 function game() {
-    for (i = 0; i < 5; i++) {
+    if (playerscore != 5 && computerscore != 5) {
         var computerSelection = computerPlay()
         var player = playerChoice()
         console.log(playRound(player, computerSelection))
-    }
-    if (playerscore > computerscore) {
-        console.log("You win!  Final score is " + playerscore + " to " + computerscore + "!")
-    } else if (computerscore > playerscore) {
-        console.log("You lose!  Final score is " + playerscore + " to " + computerscore + "!")
+        return(game())
     } else {
-        console.log("You tied! Final score is " + playerscore + " to " + computerscore + "!")
+        if (playerscore > computerscore) {
+            console.log("You win!  Final score is " + playerscore + " to " + computerscore + "!")
+            return 0;
+        } else if (computerscore > playerscore) {
+            console.log("You lose!  Final score is " + playerscore + " to " + computerscore + "!")
+            return 0;
+        } else {
+            console.log("You tied! Final score is " + playerscore + " to " + computerscore + "!")
+            return 0;
+        }
     }
 }
 
