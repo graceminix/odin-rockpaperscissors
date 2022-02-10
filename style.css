@@ -1,0 +1,35 @@
+body {
+    text-align: center;
+    font: Georgia, "Times New Roman", sans-serif;
+    background-color: #83BFDB;
+}
+
+#ROCK {
+    background-image: url("rock.jpg");
+    background-size: 300px;
+    width: 150px;
+    height: 150px;
+    color: white;
+    font-weight: bold;
+}
+
+#PAPER {
+    background-image: url("paper.jpg");
+    background-size: 150px;
+    width: 150px;
+    height: 150px;
+    font-weight: bold;
+}
+
+#SCISSORS {
+    background-image: url("scissors.jpg");
+    background-size: 225px;
+    width: 150px;
+    height: 150px;
+    color: white;
+    font-weight: bold;
+}
+
+.end {
+    font-size: 25px;
+}
